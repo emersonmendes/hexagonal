@@ -1,0 +1,17 @@
+{
+  "request" : {
+    "method" : "GET",
+    "url" : "/addresses/88134420"
+  },
+  "response" : {
+      "status" : 200,
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "jsonBody": {
+        "cep" : "88134420",
+        "street" : "Rua Americo Vespucio",
+        "city" : "Palhoça"
+      }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "request" : {
+    "method" : "GET",
+    "url" : "/addresses/88134421"
+  },
+  "response" : {
+      "status" : 200,
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "jsonBody": {
+        "cep" : "88134421",
+        "street" : "Rua das Amoras",
+        "city" : "Florianópolis"
+      }
+  }
+}
