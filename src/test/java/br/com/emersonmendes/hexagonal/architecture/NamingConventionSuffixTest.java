@@ -13,7 +13,7 @@ public class NamingConventionSuffixTest {
     public static final ArchRule shouldBeSuffixedMapper = classes()
         .that()
         .resideInAnyPackage(
-         "..adapters.in.controller.mapper..",
+         "..hexagonal.adapters.in.controller.mapper..",
             "..adapters.out.repository.mapper..",
             "..adapters.out.client.mapper.."
         ).should()
@@ -22,9 +22,23 @@ public class NamingConventionSuffixTest {
     @ArchTest
     public static final ArchRule shouldBeSuffixedController = classes()
         .that()
-        .resideInAPackage("..adapters.in.controller")
+        .resideInAPackage("..hexagonal.adapters.in.controller")
         .should()
         .haveSimpleNameEndingWith("Controller");
+
+    @ArchTest
+    public static final ArchRule shouldBeSuffixedOutputAdapter = classes()
+        .that()
+        .resideInAPackage("..hexagonal.adapters.out")
+        .should()
+        .haveSimpleNameEndingWith("OutputAdapter");
+
+    @ArchTest
+    public static final ArchRule shouldBeSuffixedRepository = classes()
+        .that()
+        .resideInAPackage("..hexagonal.adapters.out.repository")
+        .should()
+        .haveSimpleNameEndingWith("Repository");
 
     //TODO: Add others
 
