@@ -6,7 +6,6 @@ import br.com.emersonmendes.hexagonal.application.core.domain.Address;
 
 public class AddressControllerMapper {
 
-
     public static Address toAddress(AddressRequest addressRequest) {
         Address address = new Address();
         address.setCity(addressRequest.getCity());

@@ -32,20 +32,20 @@ public class NamingConventionResideTest {
         .that()
         .haveNameMatching(".*Adapter")
         .should()
-        .resideInAPackage("..hexagonal.adapters.out..");
+        .resideInAPackage("..adapters.out..");
 
     @ArchTest
     public static final ArchRule portsResideOnlyPortsPackage = classes()
         .that()
         .haveNameMatching(".*Port")
         .should()
-        .resideInAPackage("..hexagonal.application.ports..");
+        .resideInAPackage("..application.ports..");
 
     @ArchTest
     public static final ArchRule useCasesResideOnlyUseCasesPackage = classes()
         .that()
         .haveNameMatching(".*UseCase")
         .should()
-        .resideInAPackage("..hexagonal.application.core.usecase..");
+        .resideInAPackage("..application.core.usecase..");
 
 }
