@@ -1,4 +1,4 @@
-package br.com.emersonmendes.hexagonal.arch;
+package br.com.emersonmendes.hexagonal.architecture;
 
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
