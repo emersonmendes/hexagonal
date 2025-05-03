@@ -34,7 +34,18 @@ public class NamingConventionResideTest {
         .should()
         .resideInAPackage("..hexagonal.adapters.out..");
 
-    //TODO: Add others
+    @ArchTest
+    public static final ArchRule portsResideOnlyPortsPackage = classes()
+        .that()
+        .haveNameMatching(".*Port")
+        .should()
+        .resideInAPackage("..hexagonal.application.ports..");
 
+    @ArchTest
+    public static final ArchRule useCasesResideOnlyUseCasesPackage = classes()
+        .that()
+        .haveNameMatching(".*UseCase")
+        .should()
+        .resideInAPackage("..hexagonal.application.core.usecase..");
 
 }
