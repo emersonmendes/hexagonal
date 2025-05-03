@@ -7,7 +7,13 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-public class DevSecurityConfig {
+public class SecurityConfig {
+
+    /**
+     * ⚠️ FOR STUDY PURPOSES ONLY ⚠️
+     * Disabling CSRF protection and granting unrestricted access to all requests
+     * is strongly discouraged in production environments.
+     */
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -18,4 +24,5 @@ public class DevSecurityConfig {
             );
         return http.build();
     }
+
 }
