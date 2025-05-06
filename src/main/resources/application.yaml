@@ -17,8 +17,8 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
-        spring.json.trusted.packages: br.com.emersonmendes.hexagonal.adapters.in.consumer.request
-        spring.json.value.default.type: br.com.emersonmendes.hexagonal.adapters.in.consumer.request.CustomerRequest
+        spring.json.trusted.packages: br.com.emersonmendes.hexagonal.adapter.in.consumer.request
+        spring.json.value.default.type: br.com.emersonmendes.hexagonal.adapter.in.consumer.request.CustomerRequest
 external:
   client:
     address:

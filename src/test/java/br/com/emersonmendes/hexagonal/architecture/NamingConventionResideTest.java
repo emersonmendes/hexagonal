@@ -15,9 +15,9 @@ public class NamingConventionResideTest {
         .haveNameMatching(".*Mapper")
             .should()
             .resideInAnyPackage(
-             "..adapters.in.controller.mapper..",
-                "..adapters.out.repository.mapper..",
-                "..adapters.out.client.mapper.."
+             "..adapter.in..mapper..",
+                "..adapter.out..mapper..",
+                "..adapter.out.repository.mapper.."
             );
 
     @ArchTest
@@ -25,14 +25,14 @@ public class NamingConventionResideTest {
         .that()
         .haveNameMatching(".*Controller")
         .should()
-        .resideInAPackage("..adapters.in.controller..");
+        .resideInAPackage("..adapter.in.controller..");
 
     @ArchTest
     public static final ArchRule adapterResideOnlyAdapterPackage = classes()
         .that()
         .haveNameMatching(".*Adapter")
         .should()
-        .resideInAPackage("..adapters.out..");
+        .resideInAPackage("..adapter.out..");
 
     @ArchTest
     public static final ArchRule portsResideOnlyPortsPackage = classes()
