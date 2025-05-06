@@ -5,6 +5,8 @@ import br.com.emersonmendes.hexagonal.application.ports.in.CustomerInputPort;
 import br.com.emersonmendes.hexagonal.application.ports.out.CustomerOutputPort;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class CustomerUseCase implements CustomerInputPort {
 
@@ -23,6 +25,11 @@ public class CustomerUseCase implements CustomerInputPort {
     public Customer findById(String id) {
         return customerOutputPort.findById(id)
             .orElseThrow( () -> new RuntimeException("Customer by id " + id + " not found"));
+    }
+
+    @Override
+    public List<Customer> findAll() {
+        return customerOutputPort.findAll();
     }
 
 }

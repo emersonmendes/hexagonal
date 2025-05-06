@@ -1,12 +1,15 @@
 package br.com.emersonmendes.hexagonal.adapters.out;
 
 import br.com.emersonmendes.hexagonal.adapters.out.repository.CustomerRepository;
+import br.com.emersonmendes.hexagonal.adapters.out.repository.entity.CustomerEntity;
 import br.com.emersonmendes.hexagonal.adapters.out.repository.mapper.CustomerRespositoryMapper;
 import br.com.emersonmendes.hexagonal.application.core.domain.Customer;
 import br.com.emersonmendes.hexagonal.application.ports.out.CustomerOutputPort;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static br.com.emersonmendes.hexagonal.adapters.out.repository.mapper.CustomerRespositoryMapper.toCustomer;
 import static br.com.emersonmendes.hexagonal.adapters.out.repository.mapper.CustomerRespositoryMapper.toCustomerEntity;
@@ -30,6 +33,14 @@ public class CustomerOutputAdapter implements CustomerOutputPort {
     public Optional<Customer> findById(String id) {
         var optionalCustomerEntity = customerRepository.findById(id);
         return optionalCustomerEntity.map(CustomerRespositoryMapper::toCustomer);
+    }
+
+    @Override
+    public List<Customer> findAll() {
+        var customerEntities = customerRepository.findAll();
+        return customerEntities.stream()
+            .map(CustomerRespositoryMapper::toCustomer)
+            .collect(Collectors.toList());
     }
 
 }

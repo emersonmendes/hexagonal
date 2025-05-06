@@ -1,14 +1,20 @@
-package br.com.emersonmendes.hexagonal.adapters.in.controller.response;
+package br.com.emersonmendes.hexagonal.adapters.in.consumer.request;
 
-public class AddressResponse {
+import jakarta.validation.constraints.NotBlank;
 
+public class AddressRequest {
+
+    @NotBlank
     private String cep;
 
+    @NotBlank
     private String street;
 
-    private String city;
-
+    @NotBlank
     private String number;
+
+    @NotBlank
+    private String city;
 
     public String getCep() {
         return cep;
@@ -26,14 +32,6 @@ public class AddressResponse {
         this.street = street;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     public String getNumber() {
         return number;
     }
@@ -42,4 +40,11 @@ public class AddressResponse {
         this.number = number;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 }

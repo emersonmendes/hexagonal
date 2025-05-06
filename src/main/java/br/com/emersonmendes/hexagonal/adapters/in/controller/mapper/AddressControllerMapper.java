@@ -20,6 +20,7 @@ public class AddressControllerMapper {
         addressResponse.setCep(address.getCep());
         addressResponse.setCity(address.getCity());
         addressResponse.setStreet(address.getStreet());
+        addressResponse.setNumber(address.getNumber());
         return addressResponse;
     }
 
