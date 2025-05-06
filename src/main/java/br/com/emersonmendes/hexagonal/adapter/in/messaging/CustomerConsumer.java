@@ -1,6 +1,6 @@
-package br.com.emersonmendes.hexagonal.adapter.in.consumer;
+package br.com.emersonmendes.hexagonal.adapter.in.messaging;
 
-import br.com.emersonmendes.hexagonal.adapter.in.consumer.request.CustomerRequest;
+import br.com.emersonmendes.hexagonal.adapter.in.messaging.request.CustomerRequest;
 import br.com.emersonmendes.hexagonal.application.core.domain.Customer;
 import br.com.emersonmendes.hexagonal.application.ports.in.CustomerInputPort;
 import org.slf4j.Logger;
@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
-import static br.com.emersonmendes.hexagonal.adapter.in.consumer.mapper.CustomerConsumerMapper.toCustomer;
+import static br.com.emersonmendes.hexagonal.adapter.in.messaging.mapper.CustomerConsumerMapper.toCustomer;
 
 @Component
 public class CustomerConsumer {

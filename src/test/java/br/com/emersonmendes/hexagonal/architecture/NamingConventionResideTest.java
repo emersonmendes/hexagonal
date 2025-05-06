@@ -21,11 +21,18 @@ public class NamingConventionResideTest {
             );
 
     @ArchTest
-    public static final ArchRule controllerResideOnlyControllerPackage = classes()
+    public static final ArchRule controllerResideOnlyWebPackage = classes()
         .that()
         .haveNameMatching(".*Controller")
         .should()
-        .resideInAPackage("..adapter.in.controller..");
+        .resideInAPackage("..adapter.in.web..");
+
+    @ArchTest
+    public static final ArchRule consumerResideOnlyMessagingPackage = classes()
+        .that()
+        .haveNameMatching(".*Consumer")
+        .should()
+        .resideInAPackage("..adapter.in.messaging..");
 
     @ArchTest
     public static final ArchRule adapterResideOnlyAdapterPackage = classes()

@@ -1,4 +1,4 @@
-package br.com.emersonmendes.hexagonal.adapter.in.consumer.request;
+package br.com.emersonmendes.hexagonal.adapter.in.web.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

@@ -1,11 +1,11 @@
-package br.com.emersonmendes.hexagonal.adapter.in.consumer.mapper;
+package br.com.emersonmendes.hexagonal.adapter.in.messaging.mapper;
 
-import br.com.emersonmendes.hexagonal.adapter.in.consumer.request.AddressRequest;
-import br.com.emersonmendes.hexagonal.adapter.in.consumer.request.CustomerRequest;
+import br.com.emersonmendes.hexagonal.adapter.in.messaging.request.AddressRequest;
+import br.com.emersonmendes.hexagonal.adapter.in.messaging.request.CustomerRequest;
 import br.com.emersonmendes.hexagonal.application.core.domain.Customer;
 import jakarta.validation.Valid;
 
-import static br.com.emersonmendes.hexagonal.adapter.in.consumer.mapper.AddressConsumerMapper.toAddress;
+import static br.com.emersonmendes.hexagonal.adapter.in.messaging.mapper.AddressConsumerMapper.toAddress;
 
 public class CustomerConsumerMapper {
 

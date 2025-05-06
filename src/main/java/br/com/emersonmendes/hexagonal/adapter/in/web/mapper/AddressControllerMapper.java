@@ -1,7 +1,7 @@
-package br.com.emersonmendes.hexagonal.adapter.in.controller.mapper;
+package br.com.emersonmendes.hexagonal.adapter.in.web.mapper;
 
-import br.com.emersonmendes.hexagonal.adapter.in.controller.request.AddressRequest;
-import br.com.emersonmendes.hexagonal.adapter.in.controller.response.AddressResponse;
+import br.com.emersonmendes.hexagonal.adapter.in.web.request.AddressRequest;
+import br.com.emersonmendes.hexagonal.adapter.in.web.response.AddressResponse;
 import br.com.emersonmendes.hexagonal.application.core.domain.Address;
 
 public class AddressControllerMapper {

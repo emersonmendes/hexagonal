@@ -1,4 +1,4 @@
-package br.com.emersonmendes.hexagonal.adapter.in.controller.response;
+package br.com.emersonmendes.hexagonal.adapter.in.web.response;
 
 public class CustomerResponse {
 

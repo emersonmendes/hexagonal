@@ -1,13 +1,13 @@
-package br.com.emersonmendes.hexagonal.adapter.in.controller.mapper;
+package br.com.emersonmendes.hexagonal.adapter.in.web.mapper;
 
-import br.com.emersonmendes.hexagonal.adapter.in.controller.request.AddressRequest;
-import br.com.emersonmendes.hexagonal.adapter.in.controller.request.CustomerRequest;
-import br.com.emersonmendes.hexagonal.adapter.in.controller.response.CustomerResponse;
+import br.com.emersonmendes.hexagonal.adapter.in.web.request.AddressRequest;
+import br.com.emersonmendes.hexagonal.adapter.in.web.request.CustomerRequest;
+import br.com.emersonmendes.hexagonal.adapter.in.web.response.CustomerResponse;
 import br.com.emersonmendes.hexagonal.application.core.domain.Customer;
 import jakarta.validation.Valid;
 
-import static br.com.emersonmendes.hexagonal.adapter.in.controller.mapper.AddressControllerMapper.toAddress;
-import static br.com.emersonmendes.hexagonal.adapter.in.controller.mapper.AddressControllerMapper.toAddressResponse;
+import static br.com.emersonmendes.hexagonal.adapter.in.web.mapper.AddressControllerMapper.toAddress;
+import static br.com.emersonmendes.hexagonal.adapter.in.web.mapper.AddressControllerMapper.toAddressResponse;
 
 public class CustomerControllerMapper {
 

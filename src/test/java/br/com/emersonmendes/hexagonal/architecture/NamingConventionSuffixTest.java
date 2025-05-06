@@ -22,9 +22,16 @@ public class NamingConventionSuffixTest {
     @ArchTest
     public static final ArchRule shouldBeSuffixedController = classes()
         .that()
-        .resideInAPackage("..adapter.in.controller")
+        .resideInAPackage("..adapter.in.web")
         .should()
         .haveSimpleNameEndingWith("Controller");
+
+    @ArchTest
+    public static final ArchRule shouldBeSuffixedConsumer = classes()
+            .that()
+            .resideInAPackage("..adapter.in.messaging")
+            .should()
+            .haveSimpleNameEndingWith("Consumer");
 
     @ArchTest
     public static final ArchRule shouldBeSuffixedOutputAdapter = classes()

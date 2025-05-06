@@ -1,6 +1,6 @@
-package br.com.emersonmendes.hexagonal.adapter.in.consumer.mapper;
+package br.com.emersonmendes.hexagonal.adapter.in.messaging.mapper;
 
-import br.com.emersonmendes.hexagonal.adapter.in.consumer.request.AddressRequest;
+import br.com.emersonmendes.hexagonal.adapter.in.messaging.request.AddressRequest;
 import br.com.emersonmendes.hexagonal.application.core.domain.Address;
 
 public class AddressConsumerMapper {
