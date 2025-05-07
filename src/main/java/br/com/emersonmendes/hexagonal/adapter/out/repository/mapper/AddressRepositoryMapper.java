@@ -3,7 +3,7 @@ package br.com.emersonmendes.hexagonal.adapter.out.repository.mapper;
 import br.com.emersonmendes.hexagonal.adapter.out.repository.entity.AddressEntity;
 import br.com.emersonmendes.hexagonal.application.core.domain.Address;
 
-public class AddressRespositoryMapper {
+public class AddressRepositoryMapper {
 
     public static AddressEntity toAddressEntity(Address address) {
         AddressEntity addressEntity = new AddressEntity();

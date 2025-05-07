@@ -5,10 +5,10 @@ import br.com.emersonmendes.hexagonal.adapter.out.repository.entity.CustomerEnti
 import br.com.emersonmendes.hexagonal.application.core.domain.Address;
 import br.com.emersonmendes.hexagonal.application.core.domain.Customer;
 
-import static br.com.emersonmendes.hexagonal.adapter.out.repository.mapper.AddressRespositoryMapper.toAddress;
-import static br.com.emersonmendes.hexagonal.adapter.out.repository.mapper.AddressRespositoryMapper.toAddressEntity;
+import static br.com.emersonmendes.hexagonal.adapter.out.repository.mapper.AddressRepositoryMapper.toAddress;
+import static br.com.emersonmendes.hexagonal.adapter.out.repository.mapper.AddressRepositoryMapper.toAddressEntity;
 
-public class CustomerRespositoryMapper {
+public class CustomerRepositoryMapper {
 
     public static CustomerEntity toCustomerEntity(Customer customer) {
         Address address = customer.getAddress();

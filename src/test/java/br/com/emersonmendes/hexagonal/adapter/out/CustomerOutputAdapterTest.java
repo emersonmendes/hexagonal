@@ -3,15 +3,12 @@ package br.com.emersonmendes.hexagonal.adapter.out;
 import br.com.emersonmendes.hexagonal.adapter.out.repository.CustomerRepository;
 import br.com.emersonmendes.hexagonal.adapter.out.repository.entity.CustomerEntity;
 import br.com.emersonmendes.hexagonal.application.core.domain.Customer;
-import br.com.emersonmendes.hexagonal.application.core.usecase.CustomerUseCase;
-import br.com.emersonmendes.hexagonal.application.ports.out.CustomerOutputPort;
 import org.instancio.Instancio;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import static br.com.emersonmendes.hexagonal.adapter.out.repository.mapper.CustomerRespositoryMapper.toCustomer;
-import static br.com.emersonmendes.hexagonal.adapter.out.repository.mapper.CustomerRespositoryMapper.toCustomerEntity;
+import static br.com.emersonmendes.hexagonal.adapter.out.repository.mapper.CustomerRepositoryMapper.toCustomerEntity;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
