@@ -29,7 +29,9 @@ public class CustomerController {
     public ResponseEntity<CustomerResponse> save(@Valid @RequestBody CustomerRequest request) {
         Customer customer = toCustomer(request);
         Customer customerResponse = customerInputPort.save(customer);
-        return ResponseEntity.created(URI.create("/api/v1/customers/" + customerResponse.getId())).build();
+        return ResponseEntity
+            .created(URI.create("/api/v1/customers/" + customerResponse.getId()))
+            .build();
     }
 
     @GetMapping("/{id}")

@@ -7,6 +7,7 @@ plugins {
 ext {
 	set('springCloudVersion','2024.0.1')
 	set('archunitVersion','1.4.0')
+	set('instancioVersion','5.4.0')
 }
 
 group = 'br.com.emersonmendes'
@@ -40,6 +41,7 @@ dependencies {
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 
 	testImplementation "com.tngtech.archunit:archunit-junit5:${archunitVersion}"
+	testImplementation "org.instancio:instancio-junit:${instancioVersion}"
 
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
