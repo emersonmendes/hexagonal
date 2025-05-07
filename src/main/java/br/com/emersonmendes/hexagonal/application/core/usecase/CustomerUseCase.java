@@ -24,7 +24,7 @@ public class CustomerUseCase implements CustomerInputPort {
     @Override
     public Customer findById(String id) {
         return customerOutputPort.findById(id)
-            .orElseThrow( () -> new RuntimeException("Customer by id " + id + " not found"));
+            .orElseThrow(() -> new RuntimeException("Customer by id " + id + " not found"));
     }
 
     @Override
