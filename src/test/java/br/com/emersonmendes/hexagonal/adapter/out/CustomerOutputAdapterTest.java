@@ -8,6 +8,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import java.util.List;
+import java.util.Optional;
+
 import static br.com.emersonmendes.hexagonal.adapter.out.repository.mapper.CustomerRepositoryMapper.toCustomerEntity;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -37,7 +40,7 @@ class CustomerOutputAdapterTest {
 
         // Act
 
-        Customer response = this.adapter.save(customer);
+        var response = this.adapter.save(customer);
 
         // Assert
 
@@ -49,10 +52,32 @@ class CustomerOutputAdapterTest {
     @Test
     void shouldFindCustomerById() {
 
+        // Arrange
+        var customer = Instancio.of(CustomerEntity.class).create();
+        when(this.repository.findById(eq("1"))).thenReturn(Optional.of(customer));
+
+        // Act
+        var optionalCustomer = this.adapter.findById("1");
+
+        // Assert
+        assertThat(optionalCustomer.isPresent()).isTrue();
+        assertThat(optionalCustomer.get().getName()).isEqualTo(customer.getName());
+        assertThat(optionalCustomer.get().getId()).isEqualTo(customer.getId());
+
     }
 
     @Test
     void shouldFindAllCustomers() {
+
+        // Arrange
+        var customer = Instancio.of(CustomerEntity.class).create();
+        when(this.repository.findAll()).thenReturn(List.of(customer));
+
+        // Act
+        var customers = this.adapter.findAll();
+
+        // Assert
+        assertThat(customers).isNotEmpty();
 
     }
 
