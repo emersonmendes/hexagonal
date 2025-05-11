@@ -27,8 +27,8 @@ public class CustomerController {
 
     @PostMapping
     public ResponseEntity<CustomerResponse> save(@Valid @RequestBody CustomerRequest request) {
-        Customer customer = toCustomer(request);
-        Customer customerResponse = customerInputPort.save(customer);
+        var customer = toCustomer(request);
+        var customerResponse = customerInputPort.save(customer);
         return ResponseEntity
             .created(URI.create("/api/v1/customers/" + customerResponse.getId()))
             .build();
